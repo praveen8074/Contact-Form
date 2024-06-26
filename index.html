@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frontend Mentor | Contact form</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body> 
+  <div class="container mt-5">  
+    <div class="success-msg" id="success-msg">
+      <div class="suc-head">
+        <img src="./assets/images/icon-success-check.svg" alt="success">
+        <h3>Message sent!</h3>
+      </div>
+      <div class="suc-info">
+        <p>Thanks for completing the form.we'll be in touch soon!</p>
+      </div>
+    </div> 
+    <form id="contactform" action="#" method="post">
+      <div class="head">
+        <h4>Contact Us</h4>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="FirstName">First Name <span class="required">*</span></label>
+          <input type="text" class="form-control" id="FirstName" name="FirstName" required>
+          <span id="firstNameError" class="error-message">This field is required</span>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="LastName">Last Name <span class="required">*</span></label>
+          <input type="text" class="form-control" id="LastName" name="LastName" required>
+          <span id="lastNameError" class="error-message">This field is required</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address <span class="required">*</span></label>
+        <input type="email" id="email" class="form-control" name="email" required>
+        <span id="emailError" class="error-message">Please enter a valid email address</span>
+      </div>
+      <div class="form-group">
+        <label>Query Type <span class="required">*</span></label>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="custom-box">
+              <div class="radio-container">
+                <div class="radio-box" id="enquiryRadio">
+                  <input type="radio" id="enquiry" name="queryType" class="radio-input" required>
+                  <div class="radio-circle"></div>
+                  <label for="enquiry" class="form-check-label">General Enquiry</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="custom-box">
+              <div class="radio-container">
+                <div class="radio-box" id="supportRequestRadio">
+                  <input type="radio" id="SupportRequest" name="queryType" class="radio-input" required>
+                  <div class="radio-circle"></div>
+                  <label for="SupportRequest" class="form-check-label">Support Request</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="queryTypeError" class="error-message">Please select a query type</div>
+      </div>
+      <div class="form-group">
+        <label for="comment">Message <span class="required">*</span></label>
+        <textarea id="comment" class="form-control" rows="4" name="comment" required></textarea>
+        <span id="commentError" class="error-message">This field is required</span>
+      </div>
+      <div class="form-check">
+        <input type="checkbox" id="checkbox" class="form-check-input" required>
+        <label for="checkbox" class="form-check-label">I consent to being contacted by the team <span class="required">*</span></label>
+        <div id="consentError" class="error-message">To submit this form, please consent to being contacted</div>
+      </div>
+      <button type="submit" class="btn btn-primary form-control mt-3" id="btn">Submit</button>
+    </form>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. Coded by <a href="https://github.com/praveen8074/Contact-Form.git">Bathala Praveen</a>.
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="./script.js"></script>
+</body>
+</html>
